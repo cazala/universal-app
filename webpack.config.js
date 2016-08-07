@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [ new webpack.NoErrorsPlugin() ],
   resolve: {
-    extensions: ['', '.js', '.json'],
+    extensions: ['', '.js', '.json', '.css', 'scss'],
     modulesDirectories: ['.', 'src', 'node_modules']
   },
   module: {
@@ -18,7 +18,17 @@ module.exports = {
         test: /\.js$/,
         loaders: ['babel'],
         exclude: /node_modules/
+      },
+      {
+        test: /(\.scss|\.css)$/,
+        loaders: ['style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss']
       }
     ]
-  }
+  },
+  postcss: [
+    require('autoprefixer'),
+    require('postcss-import'),
+    require('postcss-nested'),
+    require('postcss-simple-vars')
+  ]
 }
