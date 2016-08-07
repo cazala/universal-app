@@ -11,5 +11,14 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.json'],
     modulesDirectories: ['.', 'src', 'node_modules']
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['babel'],
+        exclude: /node_modules/
+      }
+    ]
   }
 }
