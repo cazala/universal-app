@@ -2,12 +2,20 @@ var webpack = require('webpack')
 var path = require('path')
 module.exports = {
   context: __dirname,
-  entry: './src/index.js',
+  devtool: 'cheap-module-eval-source-map',
+  entry: [
+    'webpack-hot-middleware/client',
+    './src/index.js'
+  ],
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
-  plugins: [ new webpack.NoErrorsPlugin() ],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
   resolve: {
     extensions: ['', '.js', '.json', '.css', 'scss'],
     modulesDirectories: ['.', 'src', 'node_modules']
