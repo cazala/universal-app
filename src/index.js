@@ -1,3 +1,4 @@
-import styles from './index.css'
-console.log(styles) // { red: '...' }
-window.onload = () => document.body.classList.add(styles.red)
+const a = 1
+const b = 2
+const c = 3 // unused variable
+console.log(a + b)
