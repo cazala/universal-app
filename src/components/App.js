@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react'
 import styles from './App.css'
+import Button from 'react-toolbox/lib/button'
 
 const App = (props) => (
-  <div className={styles.header}> {props.text} </div>
+  <Button label={props.text} />
 )
 
 App.propTypes = {

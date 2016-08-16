@@ -39,12 +39,14 @@
     "eslint-plugin-react": "^6.0.0",
     "eslint-plugin-standard": "^2.0.0",
     "eslint-watch": "^2.1.14",
+    "node-sass": "^3.8.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "postcss-mixins": "^5.0.0",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
     "react-loader": "^2.4.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
@@ -53,7 +55,11 @@
   },
   "dependencies": {
     "express": "^4.14.0",
+    "normalize.css": "^4.2.0",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-addons-css-transition-group": "^15.3.0",
+    "react-addons-update": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-toolbox": "^1.1.2"
   }
 }

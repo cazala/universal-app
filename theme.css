@@ -1,0 +1,8 @@
+@import "~react-toolbox/lib/colors";
+
+$color-primary: #00A0DF !default;
+$color-primary-dark: #00607C !default;
+$color-accent: #77BC1F !default;
+$color-accent-dark: #009444 !default;
+$color-primary-contrast: #ffffff !default;
+$color-accent-contrast: #646469 !default;
