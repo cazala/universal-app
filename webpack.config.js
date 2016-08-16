@@ -17,6 +17,9 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
+    alias: {
+      'components': 'src/components'
+    },
     extensions: ['', '.js', '.json', '.css', 'scss'],
     modulesDirectories: ['.', 'src', 'node_modules']
   },
@@ -24,7 +27,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel'],
+        loaders: ['react-hot', 'babel'],
         exclude: /node_modules/
       },
       {
